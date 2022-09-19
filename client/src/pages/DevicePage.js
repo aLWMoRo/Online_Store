@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import Image  from "react-bootstrap/Image";
 import { useParams } from "react-router-dom";
-import bigStar  from '../assets/bigStar.png';
-import { fetchOneDevice } from "../http/deviceAPI";
+import bigStar  from '../assets/images/bigStar.png';
+import { fetchOneDevice } from "../services/deviceAPI";
 
 const DevicePage = () =>
 {
@@ -11,7 +11,7 @@ const DevicePage = () =>
   const {id} = useParams();
   useEffect(() =>
   {
-    fetchOneDevice(id).then(data => setDevice(data))
+    fetchOneDevice(id).then(data => setDevice(data));
   }, []);
 
   const [addBasket, setAddBasket] = useState([]);

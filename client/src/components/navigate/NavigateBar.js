@@ -1,9 +1,9 @@
-import { useContext } from "react";
-import { Context } from "../index";
+import React, { useContext } from "react";
+import { Context } from "../../index";
 import { Container } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { ADMIN_ROUTE, BASKET_ROUTE, LOGIN_ROUTE, SHOP_ROUTE } from "../utils/consts";
+import { ADMIN_ROUTE, BASKET_ROUTE, LOGIN_ROUTE, SHOP_ROUTE } from "../../utils/consts";
 import { NavLink } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import { observer } from "mobx-react-lite";
@@ -11,15 +11,14 @@ import { useNavigate } from "react-router-dom";
 
 const NavigateBar = observer(() =>
 {
-
-  const logOut =  () =>
-  {
-    user.setUser({});
-    user.setIsAuth(false);
-  }
-
+    const logOut =  () =>
+    {
+      user.setUser({});
+      user.setIsAuth(false);
+    }
     const {user} = useContext(Context);
     const navigate = useNavigate();
+
     return (
         <Navbar bg="dark" variant="dark">
         <Container>

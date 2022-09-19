@@ -1,8 +1,7 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
-import { Context } from "..";
-import DeviceListInBasket from "../components/DeviceListInBasket";
+import DeviceListInBasket from "../components/basket/DeviceListInBasket";
 
 const Basket = () =>
 {

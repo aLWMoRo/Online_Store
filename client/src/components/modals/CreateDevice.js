@@ -2,7 +2,7 @@ import { observer } from "mobx-react-lite";
 import React, { useEffect, useState, useContext } from "react";
 import { Col, Dropdown, Form, Row, Button } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
-import { createDevice, fetchBrands, fetchTypes } from "../../http/deviceAPI";
+import { fetchBrands, fetchTypes } from "../../services/deviceAPI";
 import { Context } from '../../index';
 
 const CreateDevice = observer(({show, onHide}) =>

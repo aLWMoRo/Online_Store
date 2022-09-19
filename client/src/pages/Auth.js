@@ -4,9 +4,9 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from '../utils/consts';
-import { registration, login } from '../http/userAPI';
+import { registration, login } from '../services/userAPI';
 import { observer } from "mobx-react-lite";
-import { Context } from "..";
+import { Context } from "../index";
 
 const Auth = observer(() =>
 {
@@ -28,8 +28,7 @@ const Auth = observer(() =>
       }
       else
       {
-        data = await registration(email, password); 
-        // console.log(response)
+        data = await registration(email, password);
       }
       user.setUser(user);
       user.setIsAuth(true);
@@ -82,7 +81,6 @@ const Auth = observer(() =>
               {isLogin ? 'Войти' : 'Регистрация'}
             </Button>
           </Row>
-          
         </Form>
       </Card>
     </Container>

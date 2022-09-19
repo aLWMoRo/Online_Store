@@ -1,12 +1,19 @@
-import React from "react";
-import { Card, Col } from "react-bootstrap";
+import React, { useState } from "react";
+import { Button, Card, Col  } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import { useNavigate } from "react-router-dom";
-import star from '../assets/star.png';
-import { DEVICE_ROUTE } from "../utils/consts";
+import star from '../../assets/images/star.png';
+import { DEVICE_ROUTE } from "../../utils/consts";
 
-const DeviceItem = ({device}) =>
+const DeviceInBasket = ({device}) =>
 {
+    const [isRemoved, setIsRemoved] = useState(false);
+
+    const removeDevice = () =>
+    {
+        // setIsRemoved(true);
+    }
+
     const navigate = useNavigate()
     return (
         <Col md={3} className={'mt-3'} onClick={() => navigate(DEVICE_ROUTE + '/' + device.id)}>
@@ -20,8 +27,9 @@ const DeviceItem = ({device}) =>
                     </div>
                 </div>
             </Card>
+            <Button className='p-2 mt-4' variant={'outline-dark'} onClick={removeDevice}>Убрать из корзины</Button>
         </Col>  
     );
 };
 
-export default DeviceItem;
+export default DeviceInBasket;

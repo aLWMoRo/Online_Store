@@ -1,4 +1,4 @@
-import { $authHost, $host } from ".";
+import { $authHost, $host } from "./index";
 
 export const createType = async (type) =>
 {
