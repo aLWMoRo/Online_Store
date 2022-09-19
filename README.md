@@ -1,6 +1,6 @@
 # Online_Store
 
-# How to look at?
+## How to look at?
 - Clone project - `git clone https://github.com/aLWMoRo/`
 
 - Download all necessary:
