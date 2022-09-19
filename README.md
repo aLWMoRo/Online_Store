@@ -1,7 +1,7 @@
 # Online_Store
 
 ## How to look at?
-- Clone project - `git clone https://github.com/aLWMoRo/`
+- Clone project - `git clone https://github.com/aLWMoRo/Online_Store`
 
 - Download all necessary:
 
