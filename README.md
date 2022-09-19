@@ -14,11 +14,10 @@ sudo apt -y install nodejs
 node  -v
 ```
 After the commands complete, you should see the Node.js version.
-Now install the required packages. 
-`npm install package.json`
+Now install the required packages.`npm install package.json`
 
 - Launch -  `npm start`
-- 
+
 ### Or user Docker
 1) Compile the Dockerfile in the root section of the repository:
 ```bash
