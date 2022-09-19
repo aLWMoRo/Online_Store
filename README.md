@@ -14,7 +14,7 @@ sudo apt -y install nodejs
 node  -v
 ```
 After the commands complete, you should see the Node.js version.
-Now install the required packages.`npm install package.json`
+>Now install the required packages. `npm install package.json`
 
 - Launch -  `npm start`
 
